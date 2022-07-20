@@ -97,6 +97,6 @@ class RestaurantTest {
         items.add(1,new Item("Rice", 120));
         items.add(2, new Item("Roti", 50));
 
-        assertEquals("Failing Test",260);
+        assertEquals(260,restaurant.showOrder(items));
     }
 }
