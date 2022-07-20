@@ -84,5 +84,19 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void return_the_order_value_given_the_name_of_items(){
+        LocalTime openingTime = LocalTime.parse("10:30:00");
+        LocalTime closingTime = LocalTime.parse("22:00:00");
+        restaurant =new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
+        restaurant.addToMenu("Sweet corn soup",119);
+        restaurant.addToMenu("Vegetable lasagne", 269);
 
+        List<Item> items = new ArrayList<Item>();
+        items.add(0,new Item("Dal",90));
+        items.add(1,new Item("Rice", 120));
+        items.add(2, new Item("Roti", 50));
+
+        assertEquals("Failing Test",260);
+    }
 }
